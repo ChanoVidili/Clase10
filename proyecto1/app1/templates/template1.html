@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Mi nombre es: {{nombre}}</p>
+    <p>Mi apellido es: {{apellido}}</p>
+    <p>El día de hoy es: {{hoy}}</p>
+    <p>Estas son las notas de la Universidad:</p>
+    {% for nota in notas %}
+        {% if nota < 4 %}
+            <p style="color:red">NOTA BAJA: {{nota}}</p>
+        {% else %}
+            <p style="color:blue">NOTA ALTA: {{nota}}</p>
+        {% endif %}
+    {% endfor %}    
+</body>
+</html>
